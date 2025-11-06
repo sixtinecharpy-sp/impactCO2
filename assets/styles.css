@@ -1,0 +1,97 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Bricolage+Grotesque:wght@300;400;600;700&display=swap");
+
+/* Palette (depuis ton nuancier) */
+:root{
+  --mint:#B8FFBF;
+  --teal-900:#134F50;
+  --teal-800:#004B64;
+  --blue-200:#ACEAFE;
+  --lilac-100:#E2D6FF;
+  --violet-300:#A78DFF;
+  --violet-800:#52198A;
+  --cream:#FEEFE8;
+  --white:#FFFFFF;
+  --orange:#FE6B1B;
+
+  --bg:#FAFAFB;
+  --text:#1B1D21;
+  --muted:#5B6371;
+  --card:#FFFFFF;
+  --border:rgba(23,23,23,.08);
+
+  --radius-xl:18px;
+  --radius-lg:14px;
+  --shadow-sm:0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.06);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; background:var(--bg); color:var(--text);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height:1.55;
+}
+
+/* Layout */
+.container{max-width:1100px; margin:0 auto; padding:0 20px}
+.section{padding:64px 0}
+.section.compact{padding:40px 0}
+.grid{display:grid; gap:20px}
+.grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:900px){ .grid.cols-2,.grid.cols-3{grid-template-columns:1fr} }
+
+/* Typography */
+.h1,.h2,.h3{
+  font-family:"Bricolage Grotesque", Inter, sans-serif; letter-spacing:-0.015em; line-height:1.1;
+}
+.h1{font-size: clamp(32px, 4.6vw, 48px); font-weight:700}
+.h2{font-size: clamp(26px, 3.6vw, 34px); font-weight:700}
+.h3{font-size: clamp(20px, 2.6vw, 24px); font-weight:600}
+.lead{color:var(--muted); font-size:1.05rem; max-width:65ch}
+
+/* Header simple */
+.site-header{position:sticky; top:0; z-index:50; background:var(--white); border-bottom:1px solid var(--border)}
+.nav{height:68px; display:flex; align-items:center; justify-content:space-between}
+.brand{font-family:"Bricolage Grotesque"; font-weight:700; letter-spacing:.2px}
+.navlinks{display:flex; gap:22px}
+.navlinks a{color:var(--text); text-decoration:none; font-weight:600; text-transform:uppercase; font-size:.9rem}
+.navlinks a:hover{color:var(--teal-800); text-decoration:underline; text-underline-offset:4px}
+
+/* Blocks */
+.card{
+  background:var(--card); border:1px solid var(--border);
+  border-radius:var(--radius-xl); box-shadow:var(--shadow-sm); padding:22px;
+}
+.card.tint-mint{background:var(--mint)}
+.card.tint-blue{background:var(--blue-200)}
+.card.tint-lilac{background:var(--lilac-100)}
+.card.tint-violet{background:var(--violet-300); color:#231942}
+.card.tint-cream{background:var(--cream)}
+.kpi{font-size:2rem; font-weight:800}
+.kpi-sub{color:var(--muted); font-weight:500; margin-top:4px}
+
+/* Tag / badge */
+.badge{display:inline-flex; align-items:center; gap:8px; font-weight:700; font-size:.8rem; padding:6px 10px; border-radius:999px}
+.badge.teal{background:rgba(0,75,100,.1); color:var(--teal-800)}
+.badge.orange{background:rgba(254,107,27,.12); color:var(--orange)}
+
+/* Hero */
+.hero{display:grid; grid-template-columns:1.2fr 1fr; gap:28px; align-items:center}
+.hero .visual{min-height:220px; border-radius:var(--radius-xl); border:1px dashed var(--border); background:#fff}
+@media (max-width:900px){ .hero{grid-template-columns:1fr} }
+
+/* Feature row */
+.feature{display:flex; gap:14px; align-items:flex-start}
+.feature .icon{width:36px; height:36px; border-radius:10px; background:var(--teal-900); opacity:.9}
+
+/* Callout */
+.callout{
+  border-radius:var(--radius-xl);
+  background: linear-gradient(135deg, var(--blue-200), var(--mint));
+  padding:28px; border:1px solid var(--border);
+}
+
+/* Footer */
+.site-footer{padding:36px 0; color:var(--muted); border-top:1px solid var(--border)}

@@ -4,21 +4,59 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Impact CO₂ — Indicateurs & ACV</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a class="active" href="indicateurs.html">Indicateurs & ACV</a>
-      <a href="ademe.html">Données & Méthodo ADEME</a>
-      <a href="interviews.html">Interviews</a>
-      <a href="usages.html">Usages & Études de cas</a>
-      <a href="reflexivite.html">Réflexivité & Limites</a>
-    </nav>
+  <!-- Header commun -->
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand">Impact CO₂ — Projet</div>
+      <nav class="navlinks">
+        <a href="index.html">Accueil</a>
+        <a href="indicateurs.html">Indicateurs & ACV</a>
+        <a href="ademe.html">Données ADEME</a>
+        <a href="interviews.html">Interviews</a>
+        <a href="usages.html">Usages</a>
+        <a href="reflexivite.html">Réflexivité</a>
+      </nav>
+    </div>
   </header>
+
   <main>
-    <!-- Page volontairement vide -->
+    <section class="section">
+      <div class="container">
+        <span class="badge orange">ACV • CO₂e</span>
+        <h1 class="h1" style="margin:14px 0 10px">Indicateurs, unités & périmètres</h1>
+        <p class="lead">Placeholders : expliquer CO₂e, choix des catégories, périmètres de calcul (ACV), hypothèses et facteurs d’émission.</p>
+      </div>
+    </section>
+
+    <!-- 2 colonnes : structure & unité -->
+    <section class="section">
+      <div class="container grid cols-2">
+        <div class="card">
+          <h3 class="h3">Ontologie / Catégories</h3>
+          <p>À remplir : taxonomie des postes, granularité, hiérarchies.</p>
+        </div>
+        <div class="card">
+          <h3 class="h3">Unité de mesure : CO₂e</h3>
+          <p>À remplir : GWP, horizon temporel, conversions, normalisations.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Grille de features -->
+    <section class="section compact">
+      <div class="container grid cols-3">
+        <div class="card tint-cream"><strong>Facteurs d’émission</strong><br/> Placeholder</div>
+        <div class="card tint-lilac"><strong>Qualité / incertitude</strong><br/> Placeholder</div>
+        <div class="card tint-blue"><strong>Limites méthodo</strong><br/> Placeholder</div>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container">Indicateurs & ACV • © 2025</div>
+  </footer>
 </body>
 </html>
