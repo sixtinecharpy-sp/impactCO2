@@ -95,3 +95,93 @@ body{
 
 /* Footer */
 .site-footer{padding:36px 0; color:var(--muted); border-top:1px solid var(--border)}
+
+/* Logo placement */
+.visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  padding: 0px;
+}
+
+.logo-impact {
+  max-width: 100%;
+  width: 300px;         /* taille du logo (tu peux ajuster) */
+  height: auto;
+  object-fit: contain;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  align-items: center;
+  gap: 32px;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}
+
+.visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  padding: 40px;
+  min-height: 240px;
+}
+
+.logo-impact {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* --- Bloc d’introduction (logo à droite du titre et 1er paragraphe) --- */
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 0.8fr;  /* texte plus large que le logo */
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 900px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+  }
+  .intro-logo {
+    justify-content: center;
+    display: flex;
+    margin-top: 12px;
+  }
+}
+
+/* Logo */
+.intro-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-impact {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Justification du texte */
+.lead, p {
+  text-align: justify;
+}

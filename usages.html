@@ -5,8 +5,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Impact CO₂ — Usages</title>
   <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    /* ======= Spécifiques à la page Usages ======= */
+    .justify { text-align: justify; }
+
+    /* Grille d’audiences */
+    .audiences .card { min-height: 160px; }
+
+    /* Callout social (Élise) */
+    .social-block {
+      display: grid; gap: 20px; grid-template-columns: 1.2fr 1fr;
+      align-items: center;
+      background: linear-gradient(135deg, var(--blue-200), var(--mint));
+      border: 1px solid var(--border); border-radius: var(--radius-xl);
+      padding: 28px;
+    }
+    .social-visual {
+      background:#fff; border:1px dashed var(--border); border-radius: var(--radius-lg);
+      min-height: 180px; display:flex; align-items:center; justify-content:center; padding: 20px;
+    }
+    .social-visual img { max-width: 90%; height:auto; object-fit: contain; }
+    @media (max-width: 900px) {
+      .social-block { grid-template-columns: 1fr; }
+    }
+
+    /* Carousel logos — ligne défilante */
+    .carousel-wrap {
+      position: relative;
+    }
+    .carousel {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: clamp(240px, 30vw, 320px);
+      gap: 16px;
+      overflow-x: auto;
+      padding: 12px 6px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+    .carousel:focus { outline: none; }
+    .carousel::-webkit-scrollbar { height: 10px; }
+    .carousel::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius: 999px; }
+    .carousel-card {
+      scroll-snap-align: start;
+      background: var(--card);
+      border:1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      padding: 16px;
+      display:flex; flex-direction: column; gap: 12px;
+      min-height: 160px;
+    }
+    .company-logo {
+      width: 100%; height: 60px; object-fit: contain; object-position: left;
+      filter: contrast(1.1) saturate(1.05);
+    }
+    .company-name { font-weight: 700; }
+    .carousel-ctrl {
+      position: absolute; top: -48px; right: 0; display:flex; gap: 8px;
+    }
+    .btn {
+      background:#fff; border:1px solid var(--border); border-radius: 12px;
+      padding: 8px 12px; font-weight: 700; cursor: pointer;
+      box-shadow: var(--shadow-sm);
+    }
+    .btn:hover { background: #f8f8f8; }
+    @media (max-width: 600px) {
+      .carousel-ctrl { top: -42px; }
+    }
+  </style>
 </head>
 <body>
+  <!-- Header commun -->
   <header class="site-header">
     <div class="container nav">
       <div class="brand">Impact CO₂ — Projet</div>
@@ -22,32 +92,166 @@
   </header>
 
   <main>
+    <!-- Intro -->
     <section class="section">
       <div class="container">
         <span class="badge teal">Études de cas</span>
-        <h1 class="h1" style="margin:14px 0 10px">Comment la base est utilisée</h1>
-        <p class="lead">Placeholders : cas concrets (dont une touche “sociale” type Élise), bénéfices et limites observées.</p>
+        <h1 class="h1" style="margin:14px 0 10px">À qui s’adresse Impact CO₂ et comment est-il utilisé ?</h1>
+        <p class="lead justify">
+          Impact CO₂ et les bases de données de l’ADEME s’adressent à un large spectre d’acteurs : le grand public,
+          les entreprises et cabinets qui réalisent des bilans carbone, les organisations qui font de la comptabilité carbone
+          et, plus largement, les décideurs publics, ONG et structures éducatives qui cherchent à diffuser une culture commune
+          de la donnée environnementale.
+        </p>
       </div>
     </section>
 
-    <section class="section">
+    <!-- Audiences / usages principaux -->
+    <section class="section audiences">
       <div class="container grid cols-3">
-        <div class="card tint-cream"><strong>Cas 1</strong><br/> Description courte…</div>
-        <div class="card tint-blue"><strong>Cas 2</strong><br/> Description courte…</div>
-        <div class="card tint-lilac"><strong>Cas 3</strong><br/> Description courte…</div>
+        <div class="card">
+          <h3 class="h3">Grand public</h3>
+          <p class="justify">Comprendre l’ordre de grandeur des émissions associées à des gestes du quotidien et comparer des choix de consommation
+            via des équivalents CO₂e lisibles.</p>
+        </div>
+        <div class="card">
+          <h3 class="h3">Bilan carbone</h3>
+          <p class="justify">Appui aux diagnostics d’empreinte : facteurs d’émission de référence, cohérence méthodologique, sensibilisation des parties prenantes.</p>
+        </div>
+        <div class="card">
+          <h3 class="h3">Comptabilité carbone</h3>
+          <p class="justify">Outils et cabinets spécialisés (et éditeurs SaaS) qui intègrent la donnée ADEME pour automatiser l’estimation d’émissions
+            à partir d’achats/activités et standardiser la restitution.</p>
+        </div>
+        <div class="card">
+          <h3 class="h3">Collectivités & ONG</h3>
+          <p class="justify">Pédagogie, plaidoyer et mise en débat : supports visuels et indicateurs partagés pour informer, prioriser et co-construire des politiques publiques.</p>
+        </div>
+        <div class="card">
+          <h3 class="h3">Éducation & médias</h3>
+          <p class="justify">Ressources pédagogiques, contenus de vulgarisation, “ordres de grandeur” et comparaisons fiables.</p>
+        </div>
+        <div class="card">
+          <h3 class="h3">Innovation & API</h3>
+          <p class="justify">Réutilisations via interfaces et applications, calcul embarqué, widgets pédagogiques, expériences interactives.</p>
+        </div>
       </div>
     </section>
 
-    <section class="section compact">
-      <div class="container callout">
-        <h3 class="h3" style="margin:0 0 6px">Synthèse</h3>
-        <p class="lead" style="margin:0">Points saillants sur l’appropriation, obstacles, leviers.</p>
+    <!-- Bloc utilité sociale (Élise) -->
+    <section class="section">
+      <div class="container social-block">
+        <div>
+          <span class="badge orange">Utilité sociale</span>
+          <h2 class="h2" style="margin:10px 0 6px;">Mettre la donnée à hauteur d’usage</h2>
+          <p class="lead justify">
+            L’enjeu social d’Impact CO₂ est d’offrir un langage commun, actionnable et compréhensible par des publics variés. 
+            <strong>Élise</strong> (exemple d’usagère à insérer ici) illustre la manière dont des repères simples (CO₂e par geste) 
+            aident à arbitrer des décisions quotidiennes, à débattre collectivement et à soutenir des actions locales.
+          </p>
+          <p class="justify" style="margin-top:8px;">
+            Vous pouvez ici détailler le contexte d’Élise (profil, objectifs, contraintes), les écrans ou supports utilisés,
+            et ce que la vulgarisation change concrètement en matière d’appropriation et d’empowerment.
+          </p>
+        </div>
+        <div class="social-visual">
+          <!-- Remplace par une image/schéma/concept si tu veux -->
+          <span>Visuel (schéma d’usage / mockup)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carousel d’entreprises (privé) -->
+    <section class="section">
+      <div class="container">
+        <div style="display:flex; align-items:end; justify-content:space-between; gap:16px;">
+          <div>
+            <span class="badge teal">Privé</span>
+            <h2 class="h2" style="margin:10px 0 6px;">Entreprises qui s’appuient sur Impact CO₂ / données ADEME</h2>
+            <p class="lead justify">Exemples de cabinets/éditeurs qui intègrent ou valorisent la donnée carbone pour la comptabilité carbone, le reporting ou la pédagogie.</p>
+          </div>
+          <div class="carousel-ctrl">
+            <button class="btn" id="btnPrev" aria-label="Précédent">◀</button>
+            <button class="btn" id="btnNext" aria-label="Suivant">▶</button>
+          </div>
+        </div>
+
+        <div class="carousel-wrap">
+          <div class="carousel" id="carousel" tabindex="0" aria-label="Liste d’entreprises">
+            <!-- Carte 1 -->
+            <article class="carousel-card">
+              <img class="company-logo" src="assets/logos/company1.png" alt="Logo Entreprise 1" />
+              <div class="company-name">Entreprise 1</div>
+              <div class="justify">SaaS de comptabilité carbone : intégration de facteurs d’émission et automatisation des postes d’achats.</div>
+            </article>
+
+            <!-- Carte 2 -->
+            <article class="carousel-card">
+              <img class="company-logo" src="assets/logos/company2.png" alt="Logo Entreprise 2" />
+              <div class="company-name">Entreprise 2</div>
+              <div class="justify">Cabinet bilan GES : diagnostics sectoriels, accompagnement trajectoires & sensibilisation.</div>
+            </article>
+
+            <!-- Carte 3 -->
+            <article class="carousel-card">
+              <img class="company-logo" src="assets/logos/company3.png" alt="Logo Entreprise 3" />
+              <div class="company-name">Entreprise 3</div>
+              <div class="justify">API d’estimation d’empreinte CO₂e “as-a-service” pour apps et e-commerce.</div>
+            </article>
+
+            <!-- Carte 4 -->
+            <article class="carousel-card">
+              <img class="company-logo" src="assets/logos/company4.png" alt="Logo Entreprise 4" />
+              <div class="company-name">Entreprise 4</div>
+              <div class="justify">Outils pédagogiques & simulateurs grand public, widgets et contenus éditoriaux.</div>
+            </article>
+
+            <!-- + Duplique autant de cartes que nécessaire -->
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container">Usages • © 2025</div>
   </footer>
+
+  <!-- JS minimal pour la navigation du carousel -->
+  <script>
+    (function() {
+      const carousel = document.getElementById('carousel');
+      if (!carousel) return;
+
+      const cardWidth = () => carousel.firstElementChild?.getBoundingClientRect().width || 300;
+
+      // Flèches
+      document.getElementById('btnPrev')?.addEventListener('click', () => {
+        carousel.scrollBy({ left: -cardWidth() - 16, behavior: 'smooth' });
+      });
+      document.getElementById('btnNext')?.addEventListener('click', () => {
+        carousel.scrollBy({ left: cardWidth() + 16, behavior: 'smooth' });
+      });
+
+      // Drag à la souris (optionnel)
+      let isDown = false, startX = 0, scrollLeft = 0;
+      carousel.addEventListener('mousedown', (e) => {
+        isDown = true; carousel.classList.add('dragging');
+        startX = e.pageX - carousel.offsetLeft; scrollLeft = carousel.scrollLeft;
+      });
+      window.addEventListener('mouseup', () => { isDown = false; carousel.classList.remove('dragging'); });
+      carousel.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - carousel.offsetLeft;
+        const walk = (x - startX) * 1.1;
+        carousel.scrollLeft = scrollLeft - walk;
+      });
+
+      // Roulette horizontale (trackpad) — natif via overflow-x:auto
+      // Focus clavier possible via tabindex="0"
+    })();
+  </script>
 </body>
 </html>
