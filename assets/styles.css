@@ -35,7 +35,7 @@ body{
 
 /* Layout */
 .container{max-width:1100px; margin:0 auto; padding:0 20px}
-.section{padding:64px 0}
+.section{padding:20px 0}
 .section.compact{padding:40px 0}
 .grid{display:grid; gap:20px}
 .grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -248,3 +248,137 @@ body{
     @media (max-width: 600px) {
       .carousel-ctrl { top: -42px; }
     }
+
+
+/* Slider Ecobalyse / Agribalyse */
+.eco-slider {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.eco-slider-track {
+  position: relative;
+  overflow: hidden;
+}
+
+.eco-slide {
+  display: none;
+  align-items: center;
+  gap: 32px;  /* +++ PLUS DE PADDING ENTRE TEXTE ET IMAGE +++ */
+}
+
+.eco-slide-active {
+  display: flex;
+}
+
+.eco-slide-text {
+  flex: 0 0 60%;
+}
+
+/* Colonne image */
+.eco-slide-visual {
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Bloc carré avec bords arrondis */
+.eco-image-wrapper {
+  width: 100%;
+  max-width: 350px;      /* adapte la taille du carré */
+  border-radius: 20px;   /* ARRONDI 30px */
+  overflow: hidden;      /* masque ce qui dépasse du carré */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  background: #f6f6f6;   /* léger fond neutre si image non 1:1 */
+}
+
+/* L’image s’adapte bien dans le carré */
+.eco-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* remplit sans déformer le carré */
+  display: block;
+}
+
+/* Contrôles */
+.eco-slider-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+/* --- NOUVEAUX BOUTONS SLIDER --- */
+
+.eco-nav-btn {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  border: 1px solid rgba(0,0,0,0.12);
+
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(4px);
+
+  color: #004B64;
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.eco-nav-btn:hover {
+  background: rgba(0, 75, 100, 0.10);
+  border-color: rgba(0,75,100,0.25);
+  transform: translateY(-2px);
+}
+
+.eco-nav-btn:active {
+  transform: translateY(0px) scale(0.97);
+}
+
+.eco-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.eco-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: none;
+  background: #ccc;
+  cursor: pointer;
+}
+
+.eco-dot-active {
+  background: #004b64;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .eco-slide {
+    flex-direction: column;
+    gap: 20px; /* moins d’espace en mobile */
+  }
+
+  .eco-slide-text,
+  .eco-slide-visual {
+    flex: 0 0 100%;
+  }
+
+  .eco-image-wrapper {
+    max-width: 300px;
+    margin-inline: auto;
+  }
+}

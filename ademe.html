@@ -112,24 +112,82 @@
     </section>
 
     <!-- ECOBALYSE & AGRIBALYSE -->
-    <section class="section compact">
-      <div class="container callout">
-        <h3 class="h3" style="margin:0 0 6px">Lien avec Ecobalyse & Agribalyse</h3>
-        <p class="lead" style="margin:0">
-          <strong>Agribalyse</strong> : base ADEME dédiée aux impacts environnementaux des produits agricoles et alimentaires,
-          produite via Analyse de Cycle de Vie (ACV). Elle alimente la Base Carbone et l’affichage environnemental alimentaire.
-          <br><br>
-          <strong>Ecobalyse</strong> : outil du Ministère de la Transition Écologique visant à simuler l’affichage environnemental pour le textile et l’alimentaire.  
-          Ecobalyse utilise des données ADEME (Base Carbone, Agribalyse) mais intègre aussi des modèles spécifiques sectoriels.  
-          <br><br>
-          La distinction principale :  
-          <ul>
-            <li><strong>ADEME</strong> = producteur de données, garant méthodologique</li>
-            <li><strong>Ecobalyse</strong> = outil de calcul appliquant ces données dans un cadre politique particulier</li>
-          </ul>
-        </p>
+<section class="section compact">
+  <div class="container callout">
+
+    <div class="eco-slider">
+      <div class="eco-slider-header">
+        <h3 class="h3" style="margin:0">Lien avec Ecobalyse & Agribalyse</h3>
       </div>
-    </section>
+
+      <div class="eco-slider-track">
+
+        <!-- SLIDE 1 : ECOBALYSE -->
+        <div class="eco-slide eco-slide-active" data-slide="0">
+          <div class="eco-slide-text">
+            <span class="badge teal">Ecobalyse</span>
+            <p class="lead">
+              <strong>Ecobalyse</strong> est un outil développé par le Ministère de la Transition écologique et l’ADEME
+              pour calculer le « coût environnemental » de produits, d’abord dans le textile puis l’alimentaire.
+              Il s’appuie sur l’ACV et sur les bases de données publiques (Base Carbone, Agribalyse) pour simuler
+              l’affichage environnemental.
+            </p>
+            <p>
+              L’outil s’inscrit directement dans la mise en œuvre de la nouvelle obligation d’affichage environnemental dans le secteur textile, en vigueur depuis le 1er octobre.
+Cette réglementation impose aux marques de communiquer, de manière standardisée, l’impact environnemental de leurs produits.
+            </p>
+            <p>
+              <a href="https://ecobalyse.beta.gouv.fr" target="_blank">Accéder à Ecobalyse</a>
+            </p>
+          </div>
+          <div class="eco-slide-visual">
+              <div class="eco-image-wrapper">
+                <img src="assets/capture-ecobalyse.png" alt="Capture Ecobalyse" class="eco-image" />
+              </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 2 : AGRIBALYSE -->
+        <div class="eco-slide" data-slide="1">
+          <div class="eco-slide-text">
+            <span class="badge teal">Agribalyse</span>
+            <p class="lead">
+              <strong>Agribalyse</strong> est la base de données environnementale de référence sur les produits
+              agricoles et alimentaires français. Elle fournit des résultats d’ACV détaillés qui alimentent
+              la Base Carbone, l’affichage environnemental alimentaire et des outils comme Ecobalyse ou Impact CO₂.
+            </p>
+            <p>
+              Elle constitue un socle scientifique pour comparer les impacts de différents régimes alimentaires,
+              recettes ou modes de production, et pour construire des politiques publiques ou des écoconceptions
+              dans le secteur agroalimentaire.
+            </p>
+            <p>
+              <a href="https://agribalyse.ademe.fr" target="_blank">Explorer Agribalyse</a>
+            </p>
+          </div>
+          <div class="eco-slide-visual">
+              <div class="eco-image-wrapper">
+                <img src="assets/capture-agribalyse.png" alt="Capture Agribalyse" class="eco-image" />
+              </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CONTROLES DU SLIDER -->
+      <div class="eco-slider-controls">
+        <button class="eco-nav-btn" data-dir="prev" aria-label="Diapositive précédente">◀</button>
+        <div class="eco-dots">
+          <button class="eco-dot eco-dot-active" data-target="0" aria-label="Afficher Ecobalyse"></button>
+          <button class="eco-dot" data-target="1" aria-label="Afficher Agribalyse"></button>
+        </div>
+        <button class="eco-nav-btn" data-dir="next" aria-label="Diapositive suivante">▶</button>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
     <!-- BIBLIO -->
     <section class="section">
@@ -149,5 +207,42 @@
   <footer class="site-footer">
     <div class="container">ADEME • © 2025</div>
   </footer>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const slides = Array.from(document.querySelectorAll('.eco-slide'));
+    const dots = Array.from(document.querySelectorAll('.eco-dot'));
+    const prevBtn = document.querySelector('.eco-nav-btn[data-dir="prev"]');
+    const nextBtn = document.querySelector('.eco-nav-btn[data-dir="next"]');
+
+    if (!slides.length) return;
+
+    let current = 0;
+
+    function showSlide(index) {
+      if (index < 0) index = slides.length - 1;
+      if (index >= slides.length) index = 0;
+      current = index;
+
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('eco-slide-active', i === current);
+      });
+
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('eco-dot-active', i === current);
+      });
+    }
+
+    prevBtn.addEventListener('click', () => showSlide(current - 1));
+    nextBtn.addEventListener('click', () => showSlide(current + 1));
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const target = parseInt(dot.dataset.target, 10);
+        showSlide(target);
+      });
+    });
+  });
+</script>
 </body>
 </html>
