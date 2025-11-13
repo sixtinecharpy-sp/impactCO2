@@ -23,40 +23,220 @@
   </header>
 
   <main>
+    <!-- Intro -->
     <section class="section">
       <div class="container">
         <span class="badge orange">ACV • CO₂e</span>
         <h1 class="h1" style="margin:14px 0 10px">Indicateurs, unités & périmètres</h1>
-        <p class="lead">Placeholders : expliquer CO₂e, choix des catégories, périmètres de calcul (ACV), hypothèses et facteurs d’émission.</p>
+        <p class="lead">
+          ImpactCO₂ repose sur une série d’indicateurs d’empreinte carbone exprimés en <strong>CO₂ équivalent (CO₂e)</strong> et
+          calculés à partir de démarches d’<strong>analyse de cycle de vie (ACV)</strong>. Derrière les chiffres apparemment simples
+          se cache en réalité une construction complexe : choix d’unités, de périmètres, de catégories et de conventions méthodologiques
+          qui rendent le monde calculable – et donc discutable.
+        </p>
       </div>
     </section>
 
-    <!-- 2 colonnes : structure & unité -->
+    <!-- 2 colonnes : ontologie & unité -->
     <section class="section">
       <div class="container grid cols-2">
         <div class="card">
-          <h3 class="h3">Ontologie / Catégories</h3>
-          <p>À remplir : taxonomie des postes, granularité, hiérarchies.</p>
+          <h3 class="h3">Ontologie / catégories</h3>
+          <p>
+            Pour rendre le climat « calculable », ImpactCO₂ découpe la réalité en catégories : se nourrir, se déplacer, se loger,
+            consommer des biens et services, etc. Chaque geste est associé à des postes plus fins (types d’aliments, modes de transport,
+            usages numériques, etc.).
+          </p>
+          <p>
+            Cette <strong>taxonomie</strong> n’est pas neutre : elle hiérarchise certains gestes (manger de la viande, prendre l’avion…)
+            comme plus problématiques que d’autres. Elle repose sur une vision du monde organisée autour de la consommation individuelle,
+            plutôt que des systèmes productifs dans leur ensemble.
+          </p>
+          <p>
+            L’« ontologie » des données ne décrit donc pas seulement le réel : elle propose une certaine manière de le découper,
+            de le classer et d’orienter l’attention du public vers quelques leviers jugés prioritaires.
+          </p>
         </div>
+
         <div class="card">
-          <h3 class="h3">Unité de mesure : CO₂e</h3>
-          <p>À remplir : GWP, horizon temporel, conversions, normalisations.</p>
+          <h3 class="h3">Une nouvelle unité : le CO₂ équivalent</h3>
+          <p>
+            L’unité de mesure utilisée par ImpactCO₂, comme pour la plupart des indicateurs d’empreinte carbone, est le
+            <strong>CO₂ équivalent (CO₂e)</strong>. Il s’agit d’une unité « conventionnelle » qui permet d’additionner et de comparer
+            différents gaz à effet de serre (CO₂, méthane, protoxyde d’azote, etc.) en les ramenant à l’effet d’une même masse de CO₂.
+          </p>
+          <p>
+            Concrètement, on utilise des <strong>facteurs de conversion</strong> issus des travaux du GIEC (pouvoir de réchauffement global,
+            souvent sur un horizon de 100 ans) pour dire par exemple qu’1 kg de CH₄ « vaut » beaucoup plus qu’1 kg de CO₂.
+            Le CO₂e est donc une unité pratique pour comparer, mais qui repose sur des choix méthodologiques (horizon temporel,
+            scénarios climatiques, etc.) rarement visibles pour l’utilisateur.
+          </p>
+          <p>
+            Parler en CO₂e ne signifie donc pas atteindre une vérité absolue, mais s’accorder sur une <strong>convention partagée</strong>
+            pour rendre comparables des phénomènes climatiques très différents.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- Grille de features -->
+    <!-- Grille : facteurs d'émission, incertitude, limites -->
     <section class="section compact">
       <div class="container grid cols-3">
-        <div class="card tint-cream"><strong>Facteurs d’émission</strong><br/> Placeholder</div>
-        <div class="card tint-lilac"><strong>Qualité / incertitude</strong><br/> Placeholder</div>
-        <div class="card tint-blue"><strong>Limites méthodo</strong><br/> Placeholder</div>
+        <div class="card tint-cream">
+          <strong>Facteurs d’émission</strong><br/>
+          Les indicateurs d’ImpactCO₂ s’appuient sur des <strong>facteurs d’émission</strong> issus notamment de la Base Carbone et d’ACV sectorielles
+          (par exemple, Agribalyse pour l’alimentation). Ces facteurs traduisent, par unité fonctionnelle (kg de produit, km parcouru, kWh consommé…),
+          les émissions associées à l’ensemble de la chaîne de production et d’usage.
+        </div>
+        <div class="card tint-lilac">
+          <strong>Qualité & incertitude</strong><br/>
+          La mesure d’empreinte carbone n’est pas une science exacte. Les données sont affectées d’incertitudes : hypothèses sur les scénarios,
+          variabilité des pratiques, données manquantes ou approximatives. ImpactCO₂ propose un chiffre unique là où, en réalité, on se trouve plutôt
+          face à une <strong>fourchette d’ordres de grandeur</strong>.
+        </div>
+        <div class="card tint-blue">
+          <strong>Limites méthodologiques</strong><br/>
+          Uniformisation en CO₂e, focalisation sur le climat, oubli d’autres impacts (biodiversité, eau, sols…), dépendance à des conventions discutables :
+          les indicateurs sont <strong>unidimensionnels</strong> et partiels. Leur intérêt n’est pas d’être parfaitement exacts, mais de rendre visibles des
+          ordres de grandeur et d’ouvrir un espace de débat sur les transformations nécessaires.
+        </div>
+      </div>
+    </section>
+
+    <!-- ACV -->
+    <section class="section">
+      <div class="container">
+        <h2 class="h2">L’ACV : définir le périmètre de l’empreinte</h2>
+        <p>
+          L’<strong>analyse de cycle de vie (ACV)</strong> vise à évaluer les impacts environnementaux d’un produit ou d’un service
+          sur l’ensemble de son cycle de vie : extraction des matières premières, production, transport, usage, fin de vie.
+        </p>
+        <p>
+          Pour l’ADEME, l’<strong>ACV attributionnelle (ACV-A)</strong> est une méthode normalisée qui permet de modéliser les impacts potentiels des activités humaines
+          sur l’environnement dans une perspective multicritère (climat, ressources, pollution…) et fonctionnelle. Dans le cas d’ImpactCO₂,
+          cette complexité est en grande partie « compressée » en un seul indicateur climatique : le CO₂e.
+        </p>
+        <p>
+          Choisir un périmètre d’ACV, c’est donc <strong>choisir ce qui entre ou non dans le calcul</strong> : inclure ou non certains transports,
+          certains usages, certains co-produits… Autant de décisions qui influencent fortement la valeur finale affichée à l’utilisateur.
+        </p>
+      </div>
+    </section>
+
+    <!-- Pourquoi mesurer l'empreinte carbone ? -->
+    <section class="section">
+      <div class="container">
+        <h2 class="h2">Pourquoi vouloir mesurer l’empreinte carbone ?</h2>
+        <p>
+          Historiquement, la mise en chiffres des émissions de gaz à effet de serre s’inscrit dans le contexte des négociations internationales
+          (Protocole de Kyoto, puis accords climatiques successifs) et des travaux du <strong>GIEC</strong>. La quantification permet de construire
+          une <strong>convention commune</strong> : combien émet un pays, un secteur, une activité ? À partir de là, il devient possible de fixer des objectifs,
+          de se comparer, de négocier des trajectoires.
+        </p>
+        <p>
+          Les calculateurs d’empreinte carbone comme ImpactCO₂ traduisent cette dynamique dans la sphère des <strong>gestes individuels</strong>.
+          Ils opèrent un transfert entre la science et la société : l’empreinte carbone devient un <strong>objet technique</strong>, mis à disposition
+          du grand public pour informer, sensibiliser et inciter à agir.
+        </p>
+        <p>
+          Mais comme le montrent les travaux sur la « gouvernance des métriques », l’enjeu n’est pas seulement scientifique : il s’agit aussi de définir
+          ce qui compte, ce qui est compté, et ce qui reste hors-champ.
+        </p>
+      </div>
+    </section>
+
+    <!-- Construire la mesure : une convention plus qu'une vérité -->
+    <section class="section">
+      <div class="container">
+        <h2 class="h2">Construire la mesure de l’impact écologique : une convention</h2>
+        <p>
+          Mesurer l’empreinte carbone, c’est un peu comme définir le mètre : <strong>l’exactitude n’est pas essentielle, mais l’existence de la convention l’est</strong>.
+          Ce qui compte, ce n’est pas que chaque chiffre soit parfait, mais que la méthode soit crédible, explicite et suffisamment stable pour être discutée
+          et partagée.
+        </p>
+        <p>
+          Les travaux de <strong>DuPuis &amp; Mulvaney (2024)</strong> sur les calculateurs d’empreinte montrent bien que l’intérêt de ces référentiels
+          n’est pas d’atteindre une précision absolue, mais de fournir au public des outils pour participer au débat sur la réduction des émissions.
+        </p>
+        <p>
+          Encore faut-il que les usagers puissent <strong>comprendre les limites</strong> de ces dispositifs. C’est l’un des enjeux d’ImpactCO₂ qui,
+          via l’onglet « Sources / Comprendre les données », rend en partie visibles ses méthodes de calcul – ouvrant ainsi la « boîte noire »
+          plutôt que de la refermer.
+        </p>
+      </div>
+    </section>
+
+    <!-- Juger, décider, gouverner -->
+    <section class="section">
+      <div class="container grid cols-2">
+        <div>
+          <h2 class="h2">Juger et décider : quelles implications sociales ?</h2>
+          <p>
+            En affichant des chiffres et en comparant des gestes (« X km en voiture = Y repas végétariens »), ImpactCO₂ crée un <strong>signal</strong>
+            censé orienter les décisions individuelles. L’outil met en scène l’idée qu’« en connaissant son impact, on peut décider autrement ».
+          </p>
+          <p>
+            Mais la recherche montre que la décision ne suit pas mécaniquement l’information : le rapport aux chiffres dépend de la
+            <strong>littératie carbone</strong>, de la capacité à interpréter les ordres de grandeur et à les articuler à d’autres contraintes
+            (sociales, économiques, culturelles) (Dósa &amp; Russ, 2019 ; Edstrand, 2015).
+          </p>
+          <p>
+            Par ailleurs, en focalisant l’attention sur les <strong>micro-comportements individuels</strong>, ces outils déplacent en partie la charge
+            environnementale du système productif vers la consommation : l’empreinte de nos comportements reflète avant tout
+            l’<strong>intensité carbone des systèmes qui nous entourent</strong>.
+          </p>
+        </div>
+        <div>
+          <h2 class="h2">Gouverner la transition écologique</h2>
+          <p>
+            ImpactCO₂ peut être lu comme une forme contemporaine de <strong>gouvernementalité</strong> (Foucault, 2004) : un ensemble de techniques,
+            de calculs et de dispositifs destinés à orienter les comportements à distance. En étiquetant nos consommations en CO₂e, l’outil contribue
+            à façonner ce qui est perçu comme « vertueux » ou « problématique ».
+          </p>
+          <p>
+            Dans cette perspective, l’outil apparaît comme une <strong>technologie gouvernementale</strong> centrée sur le chiffrage du risque climatique
+            et sur la responsabilisation individuelle (Merlingen, 2006). Quantifier l’impact carbone, c’est aussi produire un certain type de pouvoir :
+            celui qui rend la transition écologique gouvernable, acceptable et imputable aux comportements des individus.
+          </p>
+          <p>
+            L’enjeu est alors de ne pas se limiter à la « culpabilisation carbone », mais d’utiliser ces indicateurs comme support de débat sur
+            les transformations structurelles nécessaires (infrastructures, politiques publiques, modèles de production).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Références -->
+    <section class="section">
+      <div class="container">
+        <h2 class="h2">Références bibliographiques</h2>
+        <ul>
+          <li>
+            DuPuis, E. Melanie, &amp; Dustin Mulvaney. 2024.
+            « Opening the Black Box: Carbon-Footprint Calculators, Meat Consumption, and the ‘Wicked Problem’ of Metric Governance. »
+            <em>Sustainability: Science, Practice and Policy</em>, 20(1).
+          </li>
+          <li>
+            Dósa, Katalin, &amp; Rosemary S. Russ. 2019.
+            « Making Sense of Carbon Footprints: How Carbon Literacy and Quantitative Literacy Affects Information Gathering and Decision-Making. »
+            <em>Environmental Education Research</em>, 26(3): 421–53.
+          </li>
+          <li>
+            Edstrand, Emma. 2015.
+            « Making the Invisible Visible: How Students Make Use of Carbon Footprint Calculator in Environmental Education. »
+            <em>Learning, Media and Technology</em>, 41(2): 416–36.
+          </li>
+          <li>
+            Document HAL : « Making sense of carbon footprints », disponible sur le portail HAL-SHS :
+            <a href="https://shs.hal.science/halshs-02444474/document" target="_blank">consulter en ligne</a>.
+          </li>
+        </ul>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">Indicateurs & ACV • © 2025</div>
+    <div class="container">Indicateurs &amp; ACV • © 2025</div>
   </footer>
 </body>
 </html>

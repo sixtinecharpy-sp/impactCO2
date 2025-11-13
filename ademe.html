@@ -22,37 +22,128 @@
   </header>
 
   <main>
-    <section class="section">
-      <div class="container">
-        <span class="badge teal">Gestionnaire</span>
-        <h1 class="h1" style="margin:14px 0 10px">Rôle de l’ADEME & construction de la base</h1>
-        <p class="lead">Placeholders : sources, procédures de mise à jour, représentations, légitimité, articulation avec Ecobalyse / Agribalyse…</p>
-      </div>
-    </section>
 
+    <!-- INTRO GESTIONNAIRE -->
+    <section class="section">
+  <div class="container hero">
+
+    <div>
+      <span class="badge teal">Gestionnaire</span>
+      <h1 class="h1" style="margin:14px 0 10px">Rôle de l’ADEME & construction de la base</h1>
+
+      <p class="lead">
+        L’ADEME (Agence de la transition écologique) est un établissement public à caractère industriel et commercial (EPIC) créé en 1991.
+        Elle compte environ 1500 agents et assure un rôle central dans la production et la gouvernance des données environnementales utilisées
+        pour mesurer l’empreinte carbone. Sa mission publique lui confère une forte légitimité dans la constitution de référentiels nationaux,
+        notamment en matière de méthodologie <strong>bilan carbone</strong>.
+      </p>
+
+      <p>
+        L’agence administre plusieurs bases essentielles (Base Carbone®, Agribalyse…), alimente les politiques publiques
+        et fournit les données utilisées dans de nombreux outils, dont <strong>Impact CO₂</strong> et <strong>Ecobalyse</strong>.
+      </p>
+    </div>
+
+    <div class="visual">
+      <img src="assets/logos/ademe-logo.png" alt="Logo ADEME" class="logo-impact" />
+    </div>
+
+  </div>
+</section>
+
+    <!-- LES 3 BLOCS -->
     <section class="section">
       <div class="container grid cols-3">
+
+        <!-- SOURCES & AGREGA -->
         <div class="card">
           <h3 class="h3">Sources & agrégation</h3>
-          <p>À documenter : autres bases, revue, intégration.</p>
+          <p>
+            La Base Carbone constitue la base publique de référence pour les facteurs d’émissions de gaz à effet de serre.
+            Elle repose sur l’unité commune <strong>kg CO₂e</strong>, permettant de comparer des GES différents via leur pouvoir de réchauffement global.
+          </p>
+          <p>
+            Les données proviennent de multiples sources : travaux scientifiques, rapports sectoriels, inventaires nationaux,
+            contributions externes et autres bases comme Agribalyse (produits alimentaires) ou des données internationales.
+            L’ADEME publie une <strong>documentation de transparence</strong> précisant pour chaque entrée la source, la méthodologie et la qualité du facteur d’émission.
+          </p>
+          <p>
+            La base est ouverte aux contributions extérieures, avec un système de revue interne garantissant la cohérence et la robustesse des données.
+          </p>
         </div>
+
+        <!-- PROCESSUS / GOUVERNANCE -->
         <div class="card">
-          <h3 class="h3">Processus / gouvernance</h3>
-          <p>À documenter : qui décide, comment, fréquence.</p>
+          <h3 class="h3">Processus & gouvernance</h3>
+          <p>
+            L’ADEME administre la base via un processus structuré : intégration des contributions, évaluation méthodologique,
+            harmonisation, puis publication sous forme de versions successives (v16, v17, etc.).
+          </p>
+          <p>
+            Une <strong>gouvernance ouverte</strong> associe experts, acteurs publics et professionnels selon les thématiques.
+            La mise à jour est régulière et suit un cycle de révision transparent, permettant d’intégrer les avancées scientifiques
+            et les retours d’expérience des utilisateurs.
+          </p>
+          <p>
+            L’agence joue aussi un rôle de médiation : elle traduit des connaissances scientifiques complexes dans des formats
+            opérationnels utilisables par les collectivités, les entreprises et les particuliers.
+          </p>
         </div>
+
+        <!-- POLITIQUES PUBLIQUES -->
         <div class="card">
           <h3 class="h3">Politiques publiques</h3>
-          <p>À documenter : usages institutionnels, cadrage réglementaire.</p>
+          <p>
+            La Base Carbone est le socle des obligations réglementaires : bilans GES obligatoires des entreprises, diagnostics des collectivités,
+            et dispositifs nationaux de planification écologique.
+          </p>
+          <p>
+            À travers ses bases, l’ADEME participe à la construction d’un <strong>référentiel national bas carbone</strong>.
+            Elle fournit les standards, les outils et les données permettant aux acteurs publics et privés d’aligner leurs calculs,
+            d’évaluer leurs impacts et de planifier leurs trajectoires.
+          </p>
+          <p>
+            Ce rôle confère à l’ADEME un pouvoir structurant dans la diffusion d’une certaine représentation de l’impact environnemental,
+            comme le montrent les travaux académiques sur l’« effet politique du calcul ».
+          </p>
         </div>
+
       </div>
     </section>
 
+    <!-- ECOBALYSE & AGRIBALYSE -->
     <section class="section compact">
       <div class="container callout">
-        <h3 class="h3" style="margin:0 0 6px">Note</h3>
-        <p class="lead" style="margin:0">Ici, listez clairement les liens avec Ecobalyse / Agribalyse et les différences d’objectifs.</p>
+        <h3 class="h3" style="margin:0 0 6px">Lien avec Ecobalyse & Agribalyse</h3>
+        <p class="lead" style="margin:0">
+          <strong>Agribalyse</strong> : base ADEME dédiée aux impacts environnementaux des produits agricoles et alimentaires,
+          produite via Analyse de Cycle de Vie (ACV). Elle alimente la Base Carbone et l’affichage environnemental alimentaire.
+          <br><br>
+          <strong>Ecobalyse</strong> : outil du Ministère de la Transition Écologique visant à simuler l’affichage environnemental pour le textile et l’alimentaire.  
+          Ecobalyse utilise des données ADEME (Base Carbone, Agribalyse) mais intègre aussi des modèles spécifiques sectoriels.  
+          <br><br>
+          La distinction principale :  
+          <ul>
+            <li><strong>ADEME</strong> = producteur de données, garant méthodologique</li>
+            <li><strong>Ecobalyse</strong> = outil de calcul appliquant ces données dans un cadre politique particulier</li>
+          </ul>
+        </p>
       </div>
     </section>
+
+    <!-- BIBLIO -->
+    <section class="section">
+      <div class="container">
+        <h2 class="h2">Références</h2>
+        <ul>
+          <li>Raimbault, B. & Soutjis, B. (2024). <em>Effets politiques du calcul…</em>, Gouvernement et Action Publique.</li>
+          <li>Base Carbone – Fiche Data.gouv</li>
+          <li>Agribalyse – Portail ADEME</li>
+          <li>Article Cairn (2014) – <em>Un socle technique pour l’affichage environnemental</em></li>
+        </ul>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
