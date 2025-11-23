@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
+  <!-- Header commun -->
   <header class="site-header">
     <div class="container nav">
       <div class="brand">Impact CO₂ — Projet</div>
@@ -22,29 +23,242 @@
   </header>
 
   <main>
+    <!-- Intro en hero -->
     <section class="section">
-      <div class="container">
-        <span class="badge orange">Terrain</span>
-        <h1 class="h1" style="margin:14px 0 10px">Entretiens & extraits</h1>
-        <p class="lead">Placeholders : personnes interrogées (gestionnaires, usagers, chercheurs, journalistes, activistes).</p>
+      <div class="container hero">
+        <div>
+          <span class="badge orange">Terrain</span>
+          <h1 class="h1" style="margin:14px 0 10px">Entretiens & extraits</h1>
+          <p class="lead">
+            Résumé d’un entretien avec un·e responsable du projet 
+            <strong>IMPACT CO₂</strong> à l’ADEME, autour de la création de l’outil,
+            des bases de données mobilisées, des méthodes de calcul et des effets
+            produits sur les usages et les comportements.
+          </p>
+        </div>
       </div>
     </section>
 
-    <!-- Cartes d’interview -->
-    <section class="section">
-      <div class="container grid cols-2">
-        <article class="card">
-          <h3 class="h3">Nom / Rôle</h3>
-          <p class="lead">Citation courte (≤140 caractères) ou résumé.</p>
-          <p>Notes structurées…</p>
-        </article>
-        <article class="card">
-          <h3 class="h3">Nom / Rôle</h3>
-          <p class="lead">Citation courte (placeholder).</p>
-          <p>Notes structurées…</p>
-        </article>
+<!-- Bloc biographie + photo -->
+<section class="info-section">
+  <div class="container two-cols">
+
+    <!-- TEXTE BIO -->
+    <div class="text-col">
+      <span class="section-label">Biographie</span>
+      <h2 class="section-title" style="font-size:1.3rem;">Parcours de la personne interrogée</h2>
+
+      <div style="
+        border:1px solid #ddd;
+        border-radius:12px;
+        padding:16px 18px;
+        font-size:0.92rem;
+        line-height:1.55;
+        color:#444;
+      ">
+        <p style="margin:0;">
+          <em>
+            À compléter : une dizaine de lignes présentant le rôle de la personne,
+            son parcours à l’ADEME, ses missions, sa formation et son implication
+            dans IMPACT CO₂ et dans la gestion des bases de données carbone.
+          </em>
+        </p>
+      </div>
+    </div>
+
+    <!-- PHOTO BIO -->
+    <div class="image-col">
+      <div style="
+        width:100%;
+        border:1px solid #ddd;
+        border-radius:12px;
+        padding:12px;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        gap:10px;
+        color:#666;
+      ">
+        <div style="
+          width:150px;
+          height:150px;
+          border-radius:12px;
+          background:#f0f0f0;
+        "></div>
+
+        <span style="font-size:0.85rem;">Photo de l’interviewé·e</span>
+        <span style="opacity:0.6; font-size:0.78rem;">(à insérer)</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+    <!-- En-tête résumé d’entretien -->
+    <section class="info-section">
+      <div class="container">
+        <span class="section-label">Résumé d’entretien</span>
+        <h2 class="section-title">IMPACT CO₂, entre estimation et médiation</h2>
       </div>
     </section>
+
+    <!-- Q1 -->
+    <section class="info-section">
+      <div class="container two-cols">
+        <div class="text-col">
+          <h3 class="section-subtitle">
+            Pourquoi avoir créé l’outil IMPACT CO₂ et à quoi devait-il servir ?
+          </h3>
+        </div>
+        <div class="image-col">
+          <p class="section-text">
+            « Les données étaient très fiables, très solides, mais complètement inaccessibles
+            pour le grand public », d’où l’idée de concevoir IMPACT CO₂ comme « une sorte de
+            passerelle entre les données très techniques […] et le besoin d’avoir quelque chose
+            de simple, compréhensible et utilisable pour tout le monde ». L’objectif est de
+            « rendre ces infos beaucoup plus visibles » grâce à « des comparateurs, des simulateurs
+            et même le détecteur CO₂ », et de « créer un référent, une référence commune, donc un
+            langage partagé sur les émissions pour que tout le monde utilise le même ». L’ADEME
+            devient ainsi « un producteur de données mais aussi un médiateur et un facilitateur
+            de la transition écologique ».
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Q2 -->
+    <section class="info-section">
+      <div class="container two-cols">
+        <div class="text-col">
+          <h3 class="section-subtitle">
+            Sur quelles bases et quelles données repose l’outil ?
+          </h3>
+        </div>
+        <div class="image-col">
+          <p class="section-text">
+            Les données d’IMPACT CO₂ « viennent de grosses bases de données de l’ADEME :
+            la Base Carbone, Agribalyse, et maintenant la Base Empreinte » et s’appuient à la fois
+            sur « des données scientifiques et techniques » et sur « des données déclaratives
+            fournies par les entreprises ». Le « rôle de l’ADEME, c’est d’harmoniser » ces sources
+            et de « créer des facteurs d’émission : une unité de tel produit, tant de kilos de CO₂ ».
+            Les méthodes « ne sont pas forcément uniformisées », ce qui implique de « produire des
+            moyennes qui vont forcément de fait écraser la diversité des modes de production »
+            selon « où on se positionne dans la chaîne de valeur », tandis que « les PRG […]
+            c’est encore passé par une convention ».
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Q3 -->
+    <section class="info-section">
+      <div class="container two-cols">
+        <div class="text-col">
+          <h3 class="section-subtitle">
+            Comment mesure-t-on ou estime-t-on l’empreinte carbone dans ces bases ?
+          </h3>
+        </div>
+        <div class="image-col">
+          <p class="section-text">
+            « Il y a trois façons principales de mesurer et d’estimer les GES » :
+            d’abord, la mesure directe, où « on met des capteurs au niveau des émissions »,
+            « en sortie de cheminées des usines » ou « au pot d’échappement », puis
+            « on prend les données en sortie de capteur et on fait des moyennes ». Ensuite,
+            la méthode « la plus utilisée » consiste à « multiplier les données d’activité par
+            des facteurs d’émission », « comme une règle de trois permanente » : « tu consommes
+            un kilowattheure, l’ADEME te dit combien ça émet selon le mix électrique français ».
+            Cette méthode est « facile, efficace et facilement compréhensible » mais
+            « invisibilise toutes les spécificités des fournisseurs, des technologies,
+            de la chaîne logistique » et dépend de ce qu’on inclut : « combustion seule ?
+            extraction ? raffinage ? transport ? ». Enfin, l’ACV est décrite comme
+            « une méthode beaucoup plus précise sur le principe mais beaucoup plus complexe »
+            où « on raconte l’histoire du produit » « depuis l’extraction du matériau […]
+            jusqu’à sa fin de vie », mais où « ça dépend totalement de définir les frontières »
+            et où « on n’aura jamais un calcul au kg près des GES émis sur tout le cycle de vie ».
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Q4 -->
+    <section class="info-section">
+      <div class="container two-cols">
+        <div class="text-col">
+          <h3 class="section-subtitle">
+            Peut-on parler d’un calcul des émissions ou plutôt d’une estimation ?
+          </h3>
+        </div>
+        <div class="image-col">
+          <p class="section-text">
+            « Le plus gros angle mort, c’est que c’est vraiment un outil d’estimation
+            et pas du tout de calcul », puisque « on prend grosso modo les émissions pour
+            chaque activité » et non « un chiffrage extrêmement précis et indiscutable ».
+            Cela impose « de produire des moyennes » et « de créer de plus en plus de
+            possibilités d’écart », d’autant que « certaines données peuvent être anciennes »
+            parce qu’« on ne peut pas faire une mise à jour sur l’entièreté des données
+            en temps réel ». L’outil est donc « plutôt à visée pédagogique » dans un contexte
+            où « tout n’est pas quantifiable en équivalent CO₂ ».
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Q5 -->
+    <section class="info-section">
+      <div class="container two-cols">
+        <div class="text-col">
+          <h3 class="section-subtitle">
+            Quelles limites ou angles morts dans cette manière de quantifier ?
+          </h3>
+        </div>
+        <div class="image-col">
+          <p class="section-text">
+            « On additionne des moyennes », ce qui « homogénéise » et « crée des écarts
+            importants » selon « où on se positionne dans la chaîne de valeur ». Par ailleurs,
+            « on n’a pas la même transparence sur les données selon les secteurs » :
+            « on connaît très bien les émissions des transports », mais « sur le numérique
+            c’est beaucoup plus complexe », et « certains impacts ne sont pas forcément comptés »
+            dans « une base de données centrée sur les émissions de CO₂ et l’équivalent CO₂ ».
+            C’est pour cela que « l’on utilise et mobilise l’outil ACV pour gagner en finesse
+            sur l’estimation en essayant de prendre en compte l’ensemble des émissions sur le
+            cycle de vie ».
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Q6 -->
+    <section class="info-section">
+      <div class="container two-cols">
+        <div class="text-col">
+          <h3 class="section-subtitle">
+            Quels effets l’outil produit-il sur les pratiques et les comportements ?
+          </h3>
+        </div>
+        <div class="image-col">
+          <p class="section-text">
+            « Quand on va demander à l’outil combien émet la production d’une baguette de pain,
+            ça peut conditionner des comportements qui vont s’adapter justement au cadrage
+            et au chiffrage qu’on a fait ». IMPACT CO₂ est pensé pour « déclencher une prise
+            de conscience » en étant « autant un outil technique qu’un outil de sensibilisation »,
+            « accessible à un chef d’entreprise du CAC 40 qu’à une PME ou un auto-entrepreneur »,
+            mais aussi « au boulanger du coin qui veut avoir une idée un petit peu précise de ce
+            qu’il fait » et « au citoyen classique ».
+            Cette circulation des données est amplifiée par l’API, décrite comme « une porte
+            d’entrée informatique », « un robinet à données où n’importe qui peut se brancher »,
+            permettant à « des startups, des PME, des développeurs, même des collectivités »
+            de « récupérer directement les facteurs d’émission officiels » et « d’intégrer les données
+            carbone dans leur propre outil […] pour mobiliser nos bases [de données] à leur manière ».
+            L’enjeu est que « tout le monde puisse comparer » et « avoir les mêmes ordres de grandeur
+            en tête ». L’outil peut alors « guider un peu les choix de transport », « éviter aux
+            entreprises de développer leur base de données » ou encore « produire des services utiles
+            à la transition », tout en permettant d’observer « les pratiques de certains groupes
+            sociaux » à partir de ce que « les gens remplissent, cochent dans leur bilan carbone ».
+          </p>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">

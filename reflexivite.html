@@ -6,7 +6,9 @@
   <title>Impact CO₂ — Réflexivité</title>
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
+
 <body>
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container nav">
       <div class="brand">Impact CO₂ — Projet</div>
@@ -22,41 +24,161 @@
   </header>
 
   <main>
+
+    <!-- HERO -->
     <section class="section">
       <div class="container">
         <span class="badge orange">Bilan critique</span>
-        <h1 class="h1" style="margin:14px 0 10px">Limites, biais & apports au numérique</h1>
-        <p class="lead">Placeholders : limites méthodologiques, critiques récurrentes, effets performatifs, pistes d’amélioration.</p>
+        <h1 class="h1" style="margin:14px 0 10px">Limites, biais & apports du dispositif</h1>
+        <p class="lead justify">
+          Impact CO₂ et la Base Carbone sont des outils centraux de la politique climatique française.
+          Cette section propose un regard réflexif sur leur construction, leurs effets, leurs limites
+          et les possibilités d’évolution pour mieux articuler mesure, transparence et action.
+        </p>
       </div>
     </section>
 
+    <!-- 1. QUANTIFICATION -->
     <section class="section">
-      <div class="container grid cols-2">
-        <div class="card">
-          <h3 class="h3">Limites & critiques</h3>
-          <ul>
-            <li>Choix de variables et périmètres (placeholder)</li>
-            <li>Données manquantes / incertitudes (placeholder)</li>
-            <li>Effets d’orientation des décisions (placeholder)</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3 class="h3">Apports au monde numérique</h3>
-          <ul>
-            <li>Standardisation & interopérabilité (placeholder)</li>
-            <li>Pédagogie & visualisation (placeholder)</li>
-            <li>Ouverture / API & réutilisations (placeholder)</li>
-          </ul>
-        </div>
+      <div class="container">
+        <h2 class="h2">1. Quantification : de la convention à l’unité</h2>
+
+        <p class="justify">
+          L’empreinte carbone est une <strong>quantification conventionnelle</strong>. Les gaz à effet de serre sont
+          invisibles : on ne mesure pas directement le CO₂ émis, on l’<em>estime</em> à partir de facteurs, de modèles
+          et d’inventaires. L’ADEME joue ici un rôle essentiel : elle a structuré, consolidé puis ouvert en open data
+          la <strong>Base Carbone</strong>, permettant à la France de disposer d’un référentiel commun.
+        </p>
+
+        <p class="justify">
+          Comme l’écrit Desrosières, « <em>quantifier, c’est convenir puis mesurer</em> ». La mesure
+          n’est jamais purement technique : elle repose sur des conventions (facteurs PRG, périmètres, modalités
+          d’agrégation) qui sont le résultat de compromis scientifiques, institutionnels et politiques.
+        </p>
+
+        <p class="justify">
+          Le périmètre retenu influence fortement le résultat. L’exemple le plus connu est celui du
+          <strong>Scope 3</strong> : l’inclure ou non change totalement la répartition des responsabilités au sein d’une
+          chaîne de valeur. De même, ramener six gaz différents à une seule unité — le CO₂e — rend comparable, mais
+          masque les variations physiques et temporelles entre GES.
+        </p>
       </div>
     </section>
 
-    <section class="section compact">
-      <div class="container callout">
-        <h3 class="h3" style="margin:0 0 6px">À explorer</h3>
-        <p class="lead" style="margin:0">Représentations alternatives des données, comparaisons avec d’autres dispositifs.</p>
+    <!-- 2. PERFORMATIVITÉ -->
+    <section class="section">
+      <div class="container">
+        <h2 class="h2">2. Du Bilan Carbone® à l’actif numérique : la performativité du dispositif</h2>
+
+        <p class="justify">
+          La Base Carbone fixe les conventions, mais <strong>Impact CO₂</strong> est l’outil qui rend ces conventions
+          visibles, appropriables et utilisables par tous. En proposant des équivalences concrètes (trajets, repas,
+          usages numériques), il transforme un indicateur complexe en un <strong>langage commun</strong>.
+        </p>
+
+        <p class="justify">
+          Grâce aux API, widgets et simulateurs, l’ADEME permet une circulation massive de la donnée carbone.
+          L’empreinte devient un <strong>objet numérique omniprésent</strong>, intégré à des applications, des SaaS,
+          des parcours éducatifs et des outils de sensibilisation. Le dispositif est donc <strong>performatif</strong> :
+          il fait exister l’idée de “carbone” dans les pratiques quotidiennes, influençant les stratégies et les choix.
+        </p>
       </div>
     </section>
+
+    <!-- 3. REGARD CRITIQUE -->
+    <section class="section">
+      <div class="container">
+        <h2 class="h2">3. Les limites de la gouvernance par les nombres</h2>
+
+        <p class="justify">
+          La standardisation du carbone est utile pour partager un langage commun, mais elle comporte des limites.
+        </p>
+
+        <p class="justify">
+          <strong>Simplification et réification</strong> : la réduction d’impacts multiples à un chiffre unique
+          (kgCO₂e) fait disparaître la complexité des cycles de vie, les incertitudes et les spécificités sectorielles.
+        </p>
+
+        <p class="justify">
+          <strong>Optimisation des comportements individuels</strong> : en rendant certains gestes très visibles,
+          Impact CO₂ peut encourager des actions individuelles mesurables mais laisser de côté
+          des transformations structurelles moins quantifiables.
+        </p>
+
+        <p class="justify">
+          <strong>Statut politique de l’indicateur</strong> : l’intégration du Scope 3 dans les référentiels internationaux
+          (ISO, GHG Protocol) doit beaucoup aux batailles institutionnelles de l’ADEME. Le chiffre carbone n’est donc
+          jamais neutre : il résulte de choix, d’arbitrages et de rapports de force.
+        </p>
+      </div>
+    </section>
+
+    <!-- 4. PISTES D’AMÉLIORATION -->
+    <section class="section">
+      <div class="container">
+        <h2 class="h2">4. Pistes d’amélioration</h2>
+
+        <ul class="justify" style="margin-bottom:20px;">
+          <li>Rendre visibles les marges d’incertitude et expliciter les hypothèses retenues.</li>
+          <li>Améliorer l’interopérabilité internationale (GHG Protocol, DEFRA, IPCC).</li>
+          <li>Clarifier les périmètres (Scopes 1, 2, 3) et leurs implications politiques.</li>
+          <li>Élargir les indicateurs à d’autres impacts (biodiversité, eau, ressources).</li>
+          <li>Développer des outils de planification pour relier mesure et action.</li>
+          <li>Proposer un double niveau de lecture : grand public / expert.</li>
+        </ul>
+
+        <!-- IMAGES -->
+<div style="
+  display: flex;
+  gap: 20px;
+  margin-top: 16px;
+  justify-content: center;
+  align-items: flex-start;
+">
+
+  <img 
+    src="assets/scopes.png"
+    alt="Visualisation des scopes 1, 2 et 3"
+    style="
+      width: 48%;
+      border-radius: 12px;
+      padding: 6px;
+      background: #f5f5f5;
+      object-fit: contain;
+    "
+  />
+
+  <img 
+    src="assets/ordre de grandeurs.png"
+    alt="Ordres de grandeur d'émissions"
+    style="
+      width: 48%;
+      border-radius: 12px;
+      padding: 6px;
+      background: #f5f5f5;
+      object-fit: contain;
+    "
+  />
+
+</div>
+      </div>
+    </section>
+
+    <!-- SOURCES -->
+    <section class="section">
+      <div class="container">
+        <h2 class="h2">Références</h2>
+        <ul class="justify">
+          <li>ADEME Infos. « Le Détecteur CO₂, un outil qui compte ». 2024.</li>
+          <li>Base Carbone v17 — data.gouv.fr.</li>
+          <li>Big Média BPI — Comprendre le Bilan Carbone®. 2024.</li>
+          <li>Le Breton & Aggeri (2018). Performativité de la comptabilité carbone.</li>
+          <li>Ministère de la Culture — Ressources Bilan Carbone.</li>
+          <li>Pallez, Le Breton & Gourdon (2017). Construction d’une politique publique environnementale.</li>
+        </ul>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
@@ -64,3 +186,4 @@
   </footer>
 </body>
 </html>
+
